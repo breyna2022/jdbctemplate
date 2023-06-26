@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form th:action="@{/posts/update}" method="post" th:object="${post}">
+                <label>Titulo</label><br>
+                <input type="text" name="titulo" th:field="*{titulo}"><br>
+                <input type="hidden" name="idpost" th:field="*{idtitulo}"><br>
+                <label>Descripcion</label><br>
+                <textarea id="id" name="descripcion" rows="5" cols="20" th:field="*{descripcion}"></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </body>
+</html>
